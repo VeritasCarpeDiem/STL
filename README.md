@@ -14,4 +14,4 @@ Make sure to include following libraries:
 #include <deque>
 ```
 ## Output:
-![Output] (Capture.png)
+![Output](Capture.png)
