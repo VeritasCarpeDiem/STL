@@ -13,3 +13,5 @@ Make sure to include following libraries:
 #include <iterator>
 #include <deque>
 ```
+## Output:
+![Output] (Capture.png)
