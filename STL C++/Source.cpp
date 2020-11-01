@@ -23,20 +23,17 @@ public:
 
 int main()
 {
-	vector<int> input = { 1,4,2,6};
+	vector<int> input;
 	vector<int>::iterator ptr;
 
-	/*int number = 0;*/
-	/*char reply;*/
-	/*do
+	int number;
+
+	for(int i=0;i<5;i++)
 	{
-		cout << "Enter number: ";
+		cout << "Enter number " <<i+1<<": ";
 		cin >> number;
 		input.push_back(number);
-		cout << "Enter another number? (Y/N)";
-		cin >> reply;
-
-	} while (reply == 'y' || reply == 'Y');*/
+	}
 
 	//sort vector in descending order
 	sort(input.begin(), input.end(),greater<int>());
@@ -49,9 +46,11 @@ int main()
 	cout << endl;
 	stack<int,vector<int>> myStack(input); //assign elements of vector to Stack in copy constructor
 	queue<int> myQueue; 
-	;
+	Foo f;
+	
 	//Print stack
 	cout << "Element" << "\t" << "-->"<<"\t"<<"Next Greater Number"<<endl;
+	//Push elements in stack to queue
 	myQueue.push(myStack.top());
 	while (!myStack.empty())
 	{
@@ -62,10 +61,11 @@ int main()
 			cout << "\t" <<"null"<< endl;
 			break;
 		}
+		//cout<<f.Greater(myStack.top(), myStack.top());
 		cout << "\t" << myStack.top()<<endl;
 		myQueue.push(myStack.top());
 	}
-	
+	//print queue
 	while (!myQueue.empty())
 	{
 		cout << myQueue.front() << " ";
